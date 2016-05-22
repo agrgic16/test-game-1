@@ -2,29 +2,34 @@
 <html>
 <head>
    <title>Ante Grgic - test-game-1</title>
-   <link rel="stylesheet" href="css/site.css">
-   <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css" />
+    <link rel="stylesheet" href="css/site.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css" />
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
+    
+    <script src="otherjs/lodash.js"></script>
+    
 </head>
 <body>
    <h3>Ante Grgic - test-game-1</h3>
    
    <div id="game-wrapper">
-      <canvas id="game"></canvas>
+      <canvas id="mygame"></canvas>
    </div>
    
    <div>
-    <button class="btn btn-success btn-lg" onclick="spawnAllBalls()">more balls plz</button>
+    <button id="moreballs" 
+            class="btn btn-success btn-sm" 
+            onclick="spawnAllBalls()">more balls plz</button>
    </div>
        
-
-
    <footer>Made with <a href="http://excaliburjs.com">Excalibur.js</a> &bull;</footer>
-   <a id="commit" href="https://github.com/excaliburjs/ludum-35/commit/COMMIT_NUMBER">@COMMIT_NUMBER</a>
    
-   
-   
-   <script src="excalibur.js?COMMIT_NUMBER"></script>
-   <script src="game/game.js?COMMIT_NUMBER"></script>
-   <script src="lodash.js"></script>
+   <a id="commit" 
+      href="https://github.com/excaliburjs/ludum-35/commit/COMMIT_NUMBER">@COMMIT_NUMBER</a>
+      
+    <script src="otherjs/jquery.js"></script>
+    <script src="otherjs/bootstrap.js"></script>
+    <script src="excalibur.js?COMMIT_NUMBER"></script>
+    <script src="game/game.js?COMMIT_NUMBER"></script>
 </body>
 </html>
