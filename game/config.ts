@@ -1,4 +1,4 @@
 var Config = {
-   width: 960,
-   height: 640,
+   width: 800,
+   height: 600,
 }
