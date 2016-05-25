@@ -1,9 +1,5 @@
-/// <reference path="../Excalibur/dist/Excalibur.d.ts" />
-/// <reference path="utility.ts" />
-/// <reference path="config.ts" />
-/// <reference path="resources.ts" />
-/// <reference path="settings.ts" />
-/// <reference path="spawnballs.ts" />
+/// <reference path="references.ts" />
+/// <reference path="ball.ts" />
 
 var game = new ex.Engine({
       canvasElementId: "mygame"
@@ -13,27 +9,31 @@ var game = new ex.Engine({
 });
 
 var ballSpawns = [
-      {color: 'Red', size: 10, x: 100, y:300}
-    , {color: 'Blue', size: 15, x: 55, y:222}
-    , {color: 'Black', size: 20, x: 221, y:555}
-    , {color: 'Yellow', size: 25, x: 333, y:111}
-    , {color: 'Green', size: 5, x: 444, y:22}
+      {color: 'Red', size: 15, x: 55, y:300}
+    , {color: 'White', size: 15, x: 110, y:222}
+    , {color: 'Azure', size: 15, x: 165, y:555}
+    , {color: 'Yellow', size: 15, x: 230, y:111}
+    , {color: 'Green', size: 15, x: 285, y:22}
+    , {color: 'Orange', size: 15, x: 340, y:666}
+    , {color: 'Magenta', size: 15, x: 395, y:700}
+    , {color: 'Viridian', size: 15, x: 450, y:750}
 ];
 
 var spawnAllBalls = function (){
-    for (var ii=0; ii < 5; ii++){
-        spawnBall(ballSpawns[ii]);
+    for (var i=0; i < ballSpawns.length; i++){
+        let nb = new Ball(ballSpawns[i]);
+        game.add(nb);
     };
 };
 
-var changeInterval = function () {
+var changeSpeedInterval = function () {
+    //change the speed interval logic here
     
 }
 
-
 //main
-for (var i=0; i < 25; i++){
+for (var i=0; i < 40; i++){
     spawnAllBalls();
 };
-console.log(game);
+
 game.start();
